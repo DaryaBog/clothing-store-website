@@ -8,6 +8,8 @@ const body = $('body')
 	scrollPrev = 0,
     title = $('.about__title').text();
 
+    let unlock = true;
+    const timeout = 800; // для transition
 
 $(document).ready(function(){
     btn.click(function(event){
@@ -60,15 +62,15 @@ $(document).ready(function(){
 
     photo.on('click', '.photo__item', function () {
         $(this).parent().prev().html($(this).html());
-   });
+    });
 
-   $(window).scroll(function() {
-	    var scrolled = $(window).scrollTop();
-	    if ( scrolled > 600 && scrolled > scrollPrev ) {
-		    header.addClass('out');
-	    } else {
-	    	header.removeClass('out');
-	    }
+    $(window).scroll(function() {
+        var scrolled = $(window).scrollTop();
+        if ( scrolled > 600 && scrolled > scrollPrev ) {
+            header.addClass('out');
+        } else {
+            header.removeClass('out');
+        }
 	scrollPrev = scrolled;
     });
 
@@ -86,13 +88,13 @@ $(document).ready(function(){
 		$input.change();
 		return false;
 	});
- 
+
 	body.on('change', '.parametrs__text', function(){
 		let $input = $(this);
 		let $row = $input.closest('.parametrs__number');
 		let step = $row.data('step');
-		let min = parseInt($row.data('min'));
-		let max = parseInt($row.data('max'));
+		let min = parseInt($row.data('min',0));
+		let max = parseInt($row.data('max',100));
 		let val = parseFloat($input.val());
 		if (isNaN(val)) {
 			val = step;
@@ -103,17 +105,31 @@ $(document).ready(function(){
 		}
 		$input.val(val);
 	});
- 
-    body.on('click', '.parametrs__btn', function(){ 
+
+    body.on('click', '.parametrs__btn', function(e){ 
         let lot = $('.parametrs__text').val();
-        alert(`товар '${title}' в количестве ${lot} ед. добавлен в корзину`)
+        
+        $('.popup').addClass('open');
+        $('.popup__title').html(`${title}`);
+        $('.popup__text').html(`Tовар '${title}' в количестве ${lot} ед. добавлен в корзину`);
         $('.bag__lot').html(`<div class="add">${lot}</div>`)
+        e.preventDefault();
     });
 
-    body.on('click', '.parametrs__like', function(){ 
+    body.on('click', '.parametrs__like', function(e){ 
         let lot = $('.parametrs__text').val();
-        alert(`товар '${title}' в количестве ${lot} ед. добавлен в избранное`)
 
-        $('.favorite__lot').html(`<div class="add">${lot}</div>`)
+        $('.popup').addClass('open');
+        $('.popup__title').html(`${title}`);
+        $('.popup__text').html(`Tовар '${title}' в количестве ${lot} ед. добавлен в избранное`);
+        $('.favorite__lot').html(`<div class="add">${lot}</div>`);
+        
     });
+
+    if($('.popup').hasClass('open')){
+        body.on('click', '.popup__body', function(){
+            $('.popup').removeClass('open');
+        });
+    }
+    e.preventDefault();
 })
