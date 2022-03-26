@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,600;1,800&family=Texturina:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>Page-1</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__logo">Logo</div>
+            <div class="header__links">
+                <div class="header__link person"><a href="#"><img src="img/person.svg" alt=""></a></div>
+                <div class="header__link favorite"><div class="favorite__lot"></div><div class="choice"></div><a href=""><img src="img/favorite.svg" alt=""></a></div>
+                <div class="header__link bag"><div class="bag__lot"></div><a href=""><img src="img/bag.svg" alt=""></a></div>
+            </div>
+            <div class="header__burger">
+                <span></span>
+            </div>
+
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__list"><a href="#">Постельное белье</a></li>
+                    <li class="header__list"><a href="#">Одежда для дома</a></li>
+                    <li class="header__list"><a href="#">Одежда для улицы</a></li>
+                    <li class="header__list"><a href="#">Выход</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content">
+            <section class="content__top">
+                <div class="content__left">
+                    <div class="photo_main"><img src="img/14896420-2 1.png" alt=""></div>
+                    <div class="photo">
+                        <div class="photo__item"><img src="img/14896420-2 1.png" alt=""></div>
+                        <div class="photo__item"><img src="img/14896420-1 1.png" alt=""></div>
+                        <div class="photo__item"><img src="img/14896420-3 1.png" alt=""></div>
+                        <div class="photo__item"><img src="img/14896420-4 1.png" alt=""></div>
+                        <div class="photo__item"><img src="img/14896420-5 1.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="content__right">
+                    <div class="about">
+                        <h1 class="about__title">Пижама для девочек</h1>
+                        <p class="about__art">Арт. 02756/46</p>
+                        <div class="about__feedback">
+                            <p>Отзывы</p>
+                            <div class="about__rating rating">
+                                <div class="rating__items">
+                                    <input id="rating__5" class="rating__item" type="radio" name="rating" value="5">
+                                    <label for="rating__5"  class="rating__label"></label>
+                                    <input id="rating__4" class="rating__item" type="radio" checked name="rating" value="4">
+                                    <label for="rating__4"  class="rating__label"></label>
+                                    <input id="rating__3" class="rating__item" type="radio" name="rating" value="3">
+                                    <label for="rating__3"  class="rating__label"></label>
+                                    <input id="rating__2" class="rating__item" type="radio" name="rating" value="2">
+                                    <label for="rating__2"  class="rating__label"></label>
+                                    <input id="rating__1" class="rating__item" type="radio" name="rating" value="1">
+                                    <label for="rating__1"  class="rating__label"></label>
+                                </div>
+                            </div>
+                            <span>14 отзывов</span>
+                            <img src="img/Line 15.svg" alt="">
+                        </div>
+                        <div class="about__prise">
+                            <span class="about__now">800 &#8381;</span>
+                            <span class="about__old">1500 &#8381;</span>
+                            <img src="img/Line 15.svg" alt="">
+                            <div class="about__sale">
+                                <div class="about__sale1">скидка -36%</div>
+                                <div class="about__sale1">акция -20%</div>
+                            </div>
+                        </div>
+                        <form action="#" class="parametrs">
+                            <div class="select">
+                                <input class="select__input" type="hidden" name="">
+                                <div class="select__head">Выберите размер</div>
+                                <ul class="select__list">
+                                    <li class="select__item">Size 1</li>
+                                    <li class="select__item">Size 2</li>
+                                    <li class="select__item">Size 3</li>
+                                </ul>
+                            </div>
+                            <a href="#">Определить размер</a>
+                            <div class="parametrs__buy">
+                                <div class="parametrs__number" data-step="1" data-min="1" data-max="100">
+                                    <input class="parametrs__text" type="text" name="count" value="1">
+                                    <a href="#" class="parametrs__minus">−</a>
+                                    <a href="#" class="parametrs__plus">+</a>
+                                </div>
+                                <div class="parametrs__btns">
+                                    <button class="parametrs__btn"> Добавить в корзину</button>
+                                    <button class="parametrs__like"><img src="img/favorite_white.svg" alt=""></button>
+                                </div>
+                            </div>
+                            <a href="#">Купить в 1 клик</a>
+                        </form>
+                    </div>
+                    <div class="about-bottom">
+                        <a href="#"><img src="img/Closes.svg" alt=""> Описание товара</a>
+                        <a href="#"><img src="img/clock.svg" alt=""> Доставка и возврат</a>
+                        <a href="#"><img src="img/pay.svg" alt=""> С пособы оплаты</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content__bottom">
+                <a href="#">Посмотреть все стили</a>
+                <div class="bottom__galery">
+                    <div class="bottom__image bottom__image_big"><img src="img/12296786-1 1.png" alt=""></div>
+                    <div class="bottom__image"><img src="img/13986707-1 1.png" alt=""></div>
+                    <div class="bottom__image"><img src="img/13986707-1 1 (1).png" alt=""></div>
+                    <div class="bottom__image bottom__image_shadow">
+                        <img src="img/8395943-1 1.png" alt="">
+                        <div class="bottom__op">
+                            <div class="bottom__screen"><img src="img/full_screen.svg"  alt=""></div>
+                            <div class="bottom__bag"><img src="img/bottom_bag.svg"  alt=""></div>
+                            <span class="bottom__text">Узнай, что на мне</span>
+                            <div class="bottom__like"><img src="img/favorite_full.svg" alt=""></div>
+                            <span class="bottom__n-like">200</span>
+                        </div>
+                    </div>
+                    <div class="bottom__image"><img src="img/14896421-1 1.png" alt=""></div>
+                </div>
+            </section>
+        </main>
+        <div class="footer">
+            <div class="footer__buyer">
+                <h2>Покупатлям</h2>
+                <a href="#">Каталог</a>
+                <a href="#">Акции</a>
+                <a href="#">Бренды</a>
+            </div>
+            <div class="footer__about-us">
+                <h2>О нас</h2>
+                <a href="#">О компании</a>
+                <a href="#">Новости</a>
+                <a href="#">Команда</a>
+            </div>
+            <form action="#" class="footer__email">
+                <h2>Узнайте первыми о новинках и акциях</h2>
+                <div class="footer__inp"><input class="validate" type="email" placeholder="Адрес электронной почты"></div>
+                <button class="footer__btn">Подписаться</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
