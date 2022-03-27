@@ -6,8 +6,11 @@ const body = $('body')
     photo = $('.content__left'),
     header = $('.header'),
 	scrollPrev = 0,
-    title = $('.about__title').text();
+    title = $('.about__title').text(),
 
+    popup = $('.popup'),
+    parametrs = $('.parametrs__btn'),
+    like = ('.parametrs__like');
     let unlock = true;
     const timeout = 800; // для transition
 
@@ -105,6 +108,7 @@ $(document).ready(function(){
 		}
 		$input.val(val);
 	});
+
 
     body.on('click', '.parametrs__btn', function(e){ 
         let lot = $('.parametrs__text').val();
