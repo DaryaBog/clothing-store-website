@@ -131,9 +131,9 @@ $(document).ready(function(){
     });
 
     if($('.popup').hasClass('open')){
-        body.on('click', '.popup__body', function(){
+        body.on('click', '.popup__body', function(e){
             $('.popup').removeClass('open');
+            e.preventDefault();
         });
     }
-    e.preventDefault();
 })
