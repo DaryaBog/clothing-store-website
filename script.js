@@ -119,10 +119,16 @@ $(document).ready(function(){
         $('.bag__lot').html(`<div class="add">${lot}</div>`)
         e.preventDefault();
     });
-
+    $('.parametrs__like').on('mousedown', function(e){
+        $('.favorite_active').attr('src','img/favorite.svg');
+        e.preventDefault();
+    })
+    $('.parametrs__like').on('mouseup', function(e){
+        $('.favorite_active').attr('src','img/favorite_white.svg');
+        e.preventDefault();
+    })
     body.on('click', '.parametrs__like', function(e){ 
         let lot = $('.parametrs__text').val();
-
         $('.popup').addClass('open');
         $('.popup__title').html(`${title}`);
         $('.popup__text').html(`Tовар '${title}' в количестве ${lot} ед. добавлен в избранное`);
@@ -130,10 +136,8 @@ $(document).ready(function(){
         
     });
 
-    if($('.popup').hasClass('open')){
-        body.on('click', '.popup__body', function(e){
-            $('.popup').removeClass('open');
-            e.preventDefault();
-        });
-    }
+    body.on('click', '.popup__body', function(e){
+        $('.popup').removeClass('open');
+        e.preventDefault();
+    });
 })
